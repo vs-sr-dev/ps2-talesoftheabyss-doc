@@ -1,0 +1,76 @@
+Block codec census -- tools/codec_census.py
+
+tales_block.py is the corpus copy, md5 e2dcd6b8dc717b84f67bf8a46568298c,
+byte-identical to tales-blockcodec-doc's and to Legendia's and Rebirth's.
+Not one edit was needed, in either direction: the psx dialect reads this
+disc exactly as published.
+
+==============================================================
+TOTALS
+==============================================================
+blocks found                 47513
+decode to their declared len 47513
+do not                       0
+
+method 0 (stored)            0
+method 1 (LZSS)              46358
+method 3 (LZSS + run escape) 1155
+
+packed bytes                 1069278379
+unpacked bytes               2643327828
+ratio                        2.472x
+smallest packed              173
+largest packed               2307879
+largest unpacked             5115328
+blocks where packed >= unpacked  0
+
+==============================================================
+WHERE THEY ARE
+==============================================================
+  TO7ROOT           1 blocks          24537 packed bytes
+  TO7FIELD      46348 blocks      488008888 packed bytes
+  TO7MAP          594 blocks      459730429 packed bytes
+  TO7BTL           32 blocks       11317586 packed bytes
+  TO7NPC            0 blocks              0 packed bytes
+  TO7EV             0 blocks              0 packed bytes
+  TO7MOV            0 blocks              0 packed bytes
+  TO7BGM            0 blocks              0 packed bytes
+  TO7SE           538 blocks      110196939 packed bytes
+
+  standalone members          1168
+  inside a flat run of blocks 46345
+
+TO7NPC, TO7EV, TO7MOV and TO7BGM hold no compressed block at all: they
+are FPS3 model archives, AHX/ADX audio and Sofdec video, all stored.
+
+==============================================================
+THE TWENTY LARGEST RUNS
+==============================================================
+  TO7FIELD:/F3_6A.PKF                  4638 blocks     23935189 packed
+  TO7FIELD:/F3.PKF                     4634 blocks     24271058 packed
+  TO7FIELD:/F3_2A.PKF                  4624 blocks     23936704 packed
+  TO7FIELD:/F3_3A.PKF                  4624 blocks     23688166 packed
+  TO7FIELD:/F3_3B.PKF                  4624 blocks     13015256 packed
+  TO7FIELD:/F3_4A.PKF                  4624 blocks     21259490 packed
+  TO7FIELD:/F3_4B.PKF                  4624 blocks     16249551 packed
+  TO7FIELD:/F3_5A.PKF                  4624 blocks     23992110 packed
+  TO7FIELD:/F3_M.PKF                   4624 blocks     12676445 packed
+  TO7FIELD:/F3_D1.PKF                   784 blocks      4501809 packed
+  TO7FIELD:/F3_D3.PKF                   784 blocks      4950698 packed
+  TO7FIELD:/F3_D2.PKF                   400 blocks      2435759 packed
+  TO7FIELD:/F0_6A.PKF                   295 blocks     37470023 packed
+  TO7FIELD:/F0.PKF                      292 blocks     37636052 packed
+  TO7FIELD:/F0_2A.PKF                   290 blocks     36863394 packed
+  TO7FIELD:/F0_3A.PKF                   290 blocks     36358011 packed
+  TO7FIELD:/F0_4A.PKF                   290 blocks     31732632 packed
+  TO7FIELD:/F0_5A.PKF                   290 blocks     36718185 packed
+  TO7FIELD:/F0_3B.PKF                   289 blocks     18845813 packed
+  TO7FIELD:/F0_4B.PKF                   289 blocks     24177160 packed
+
+==============================================================
+METHOD BY CONTAINER
+==============================================================
+  Every one of the 46,345 blocks inside a run is method 1.  Every one of
+  the 1,155 method-3 blocks is a standalone member.  So the run escape is
+  a per-run packer setting on this disc as it was on the 2000 and 2004
+  discs, and here the split follows the container exactly.

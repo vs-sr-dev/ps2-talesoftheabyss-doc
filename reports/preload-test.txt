@@ -1,0 +1,23 @@
+Is the synthetic dictionary used? -- tools/preload_test.py
+
+--- seed 7, 40 members ---
+40 members decoded twice, preloaded ring vs empty ring
+  byte-identical output      6
+  different output           34
+  different *length*         0
+
+
+--- seed 11, 40 members ---
+40 members decoded twice, preloaded ring vs empty ring
+  byte-identical output      5
+  different output           35
+  different *length*         0
+
+
+--- seed 23, 40 members ---
+40 members decoded twice, preloaded ring vs empty ring
+  byte-identical output      4
+  different output           36
+  different *length*         0
+
+

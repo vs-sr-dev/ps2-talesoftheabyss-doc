@@ -1,0 +1,329 @@
+Leftovers -- tools/leftovers.py and targeted reads
+
+Everything below is in the shipped retail build.
+
+==============================================================
+MIDDLEWARE: RENDERWARE
+==============================================================
+Three source paths from the SDK's own build tree, and the graphics
+core's compile stamp.  The string 'RenderWare' itself is not in the
+binary; the SDK directory name and the PDS pipeline diagnostics are.
+    c:/daily/rwsdk/plugin/pds/sky2/G3_2DFill/G3_2DFill_Node.c
+    c:/daily/rwsdk/plugin/pds/sky2/G3_2DFont/G3_2DFont_Node.c
+    c:/daily/rwsdk/plugin/pds/sky2/G3_2DStroke/G3_2DStroke_Node.c
+    Core built at Jul 16 2004 17:14:46
+    Only rendering sub system
+    PS2 material pipes
+    PS2 sector pipes
+    PS2 stomic pipes
+
+==============================================================
+MIDDLEWARE: CRI, BUILT TO THE SECOND
+==============================================================
+Twenty-four components stamped inside a twenty-nine-second window on
+28 February 2005, and three ROFS components from 2 March.  Legendia
+carried the same habit: nine components in twenty-six seconds.
+    ADXF/PS2EE Ver.7.30 Build:Feb 28 2005 19:25:12
+    ADXPS2 Ver.2.60 Build:Feb 28 2005 19:25:21
+    ADXT/PS2EE Ver.9.44 Build:Feb 28 2005 19:25:20
+    AHX/PS2EE Ver.1.44 Build:Feb 28 2005 19:25:26
+    AIXP/PS2EE Ver.2.21 Build:Feb 28 2005 19:25:27
+    CFG/PS2EE Ver.1.002 Build:Feb 28 2005 19:25:35
+    CVFS/PS2EE Ver.2.39 Build:Feb 28 2005 19:25:29
+    DTR Ver.1.08 Build:Feb 28 2005 19:25:30
+    DTX Ver.1.10 Build:Feb 28 2005 19:25:30
+    DVCI/PS2EE Ver.2.71 Build:Feb 28 2005 19:25:31
+    DXCS/PS2EE Ver.1.11 Build:Feb 28 2005 19:25:09
+    HTCI/PS2EE Ver.2.69 Build:Feb 28 2005 19:25:31
+    LSC/PS2EE Ver.2.22 Build:Feb 28 2005 19:25:33
+    MFCI/PS2EE Ver.1.10 Build:Feb 28 2005 19:25:33
+    PL2ENC Ver.1.01 Build:Feb 28 2005 19:25:06
+    PS2RNA Ver.1.32 Build:Feb 28 2005 19:25:33
+    ROCI Ver.1.15 Build:Mar  2 2005 11:31:01
+    ROFS Ver.1.77 Build:Mar  2 2005 11:30:59
+    RSU Ver.1.10 Build:Mar  2 2005 11:31:01
+    SJ/PS2EE Ver.6.31 Build:Feb 28 2005 19:25:09
+    SJRMT Ver.1.03 Build:Feb 28 2005 19:25:10
+    SJX Ver.1.09 Build:Feb 28 2005 19:25:11
+    SKG/PS2EE Ver.0.64 Build:Feb 28 2005 19:25:15
+    SRD/PS2EE Ver.2.22 Build:Feb 28 2005 19:25:34
+    SVM/PS2EE Ver.1.58 Build:Feb 28 2005 19:25:09
+    XENC/PS2EE Ver.1.10 Build:Feb 28 2005 19:25:16
+    ADXENC.DLL Ver.1.10 Feb 28 2005
+    ADXENC/PS2EE Ver.1.10 Build:Feb 28 2005 19:25:
+
+==============================================================
+TOOLCHAIN
+==============================================================
+   .comment          MW MIPS C Compiler (2.4.1.01) / PlayStation2
+   in the image       Append: GCC2096 SCE3020
+   overlays          MWo3 -- Metrowerks CodeWarrior overlay format
+   I/O processor     CEI.IRX, PFM.IRX and SDM.IRX each keep one
+                     'MW MIPS C Compiler (2.4.1.01)' per object file:
+                     113, 85 and 74 of them, never merged.
+   CEI.IRX    CEI_E2IS_trans_iop.c, CEI_IOP.c, CEI_IOP_timer.c, CEI_IS_trans.c, CEI_reverb.c, CEI_sifque.c, CEI_sifque_ext.c, CallTable.s, EntryTable.s, ik_queue.c, ik_ringbuf.c, ik_vol.c, main.c
+   PFM.IRX    PFM_midi.c, PFM_tsp.c, PFM_tsq2.c, ik_vol.c
+   SDM.IRX    CallTable.s, EntryTable.s, SDM_IOP.c, SDM_bgm_player_iop.c, SDM_combuf_IOP.c, SDM_se_port_iop.c, SDM_status_iop.c, main.c
+
+==============================================================
+DEVKIT
+==============================================================
+    host0:ioprp300.img
+    host0:irxarc.bin
+   IOPRP300.IMG also carries one host0: path of its own.
+
+==============================================================
+SOURCE CONTROL
+==============================================================
+Nine Visual SourceSafe status files shipped, one per volume, binary,
+magic 34 12 01 00.  They are the working-copy state of nine asset
+directories, and the newest of them is dated after the executable.
+   TO7ROOT      2912 bytes  2005-11-25 16:52:46
+   TO7FIELD     1216 bytes  2005-11-24 18:17:52
+   TO7MAP      10992 bytes  2005-11-24 18:18:00
+   TO7BTL        736 bytes  2005-11-24 18:09:22
+   TO7NPC      16880 bytes  2005-11-18 14:38:40
+   TO7EV        2320 bytes  2005-11-10 13:57:37
+   TO7MOV        400 bytes  2005-10-24 10:47:28
+   TO7BGM       2400 bytes  2005-10-21 11:22:56
+   TO7SE        8656 bytes  2005-11-09 23:45:02
+
+==============================================================
+A SOUND TEST, AND ITS TRACK LIST IN ENGLISH
+==============================================================
+A Japan-only release whose executable carries a CSoundMode* class
+family and the complete BGM list in English.  Rebirth romanised its
+cast; Legendia had no English name table at all.
+    CSoundModeVoiceList
+    CSoundModeControlPanel
+    CSoundModePlaySound
+    %02d:%02d
+    CSoundModeProgramList
+    CSoundModeBgmSelect
+    CSoundModeVoiceSelect
+    EVOICE%03d
+    VOICE%03d
+    abyss
+    New world
+    Qliphoth
+    Guilt, duty and ...
+    The last chapter
+    Wedge
+    Wing of hope
+    The place of relaxation
+    The Royal City of Light
+    The Grocer's Village
+    The Fortified City
+    The Frontier Fortress
+    The Distribution Base
+    Desert Oasis
+    The Mining Town
+    The City of Guardians
+    Port town
+    The Floating Imperial City
+    The City of Craftsmen
+    The Silvery Snowland
+    The City of Sound Machines
+    The Hidden Village
+    The Ruined City
+    Kingdom of sky
+    Kingdom of sky - confused
+    The Lorelei Order's Base
+    Blue royal palace
+    Casino
+    Arena
+    Nature dungeon
+    Cheagle Woods
+    Tartaros
+    Fubras River
+    Coral Castle
+    Casvelt Ferry
+    Abandoned Factory
+    Zao Ruins
+    Deo Pass
+    Akzeruth Tunnel 14
+    Wyon Mirrored Cave
+    Aramis Flooded Caverns
+    Oracle Headquarters
+    Theor Forest
+    Shurrey Hills
+    Mt. Roneal
+    Zaleho Volcano
+    Feres Island
+    Farthest place
+    Farthest place - Premonition
+    Farthest place - Threat
+    Farthest place - Glint
+    The Glorious Land Eldrant
+    Mushroom Road
+    Flow when being dammed up
+    Sign of the quiet dark
+    Relic of wandering frenzy
+    The arrow was shot
+    The edge of a decision
+    Never surrender
+    Fang which wants blood
+    Awkward justice
+    At the time of farewell
+    meaning of birth
+    time to raise the cross
+    a place in the sun
+    finish the promise
+    Everlasting fight
+    Victory!
+    Game over
+    Crisis
+    Serious
+    Pleasantness
+    Miserable spectacle
+    Confrontation
+    Wish and sadness
+    Scramble
+    Guidepost
+    Belief
+    The frequenter
+    Oracle - Coercion
+    Oracle - Sorrow
+    Oracle - Conspiracy
+    Van - Truth
+    mirrors
+    Sheaf of soul
+    Happiness in my hand
+    Crimson pride
+
+==============================================================
+THE SAVE DATA NAMES THE PRODUCT CODE
+==============================================================
+    /BISLPS-25586_TOA
+    /BISLPS-25586_TOASYS
+    BISLPS-25586TOASB
+    BISLPS-25586_TOASYS
+   ...and toa_sys.ico / toa_game.ico / _mcico.slz beside them.
+   Rebirth shipped BISLPS-00000ToRsv%02d with the code left as zeroes;
+   Legendia shipped BISLPS-25533TOL-S with the real one.  So does this.
+
+==============================================================
+THE PROJECT TAG IS TOA, AND THE COMPRESSED EXTENSION IS .slz
+==============================================================
+   CTO7SystemSaveData / CTO7GameSaveDataObj -- C++ class names
+   the nine volumes are TO7*, the save files TOA*
+   619 distinct *.slz names in OV_D_BTL.OVL alone, including
+   _btm_test00.slz and _btm_test01.slz
+
+==============================================================
+DEBUG STRINGS THAT NAME THINGS THE DISC DOES NOT DO
+==============================================================
+    しないモードです
+    ERROR: focus 存在しないモードです
+    人物名鑑チェック：：TOAはできないようです
+    デバッグ用？ comp_dict_XXX は動作しません
+    ERROR:SYSTEM_GET_ENCOUNT_COUNTにMYSELFは指定できません
+    LUKEのパラメータをASCHに引き継ぎました
+    ASCHのパラメータをLUKEに引き継ぎました
+    ERROR:SYSTEM_SET_USER_PARTY_TOPにMYSELFは指定できません
+    ERROR : SET_SYSTEM_user_party_topで不正な引数が指定されました
+    ERROR:SYSTEM_GET_ENCOUNT_COUNTでパーティの指定が不正です
+    EYE_DEFAULT00_MOVE
+    EYE_DEFAULT00
+    MOUTH_DEFAULT00
+    MOUTH_DEFAULT00_TALK
+    set_EXPRESSION : %s がありません
+    enemy_encount : enemy[%d]が存在しません
+    モンスター図鑑は未実装です
+    remove_class:称号0番は指定できません
+    select_class:称号0番は指定できません
+    select_class:指定称号を取得していません
+    get_class:称号0番は指定できません
+    actor [%d]が見つかりません
+    motion_param(MPARAM_SET_TIME) 指定値が不正です
+    motion_param(MPARAM_SET_END_TIME) 指定値が不正です
+    motion_param(MPARAM_SET_LOOP_FRAME) 指定値が不正です
+    --------------------------------------------------
+    元データ(RPX)にアニメーションが含まれていないモデルには
+    set_motionできません
+
+   The first of those reads 'debug-only? comp_dict_XXX does not work'.
+   comp_dict is the only name on this disc for a compression dictionary.
+
+==============================================================
+BUILD STAMPS INSIDE THE MAP DATA
+==============================================================
+The SB7 map payloads open with their producing tool's __DATE__/__TIME__.
+   x1    SB7 Apr  1 2005 11:42:09
+   x3    SB7 Apr 21 2005 17:13:51
+   x1    SB7 Aug 23 2005 18:42:13
+   x2    SB7 Dec 17 2004 10:28:51
+   x11   SB7 Feb 25 2005 17:15:53
+   x1    SB7 Jan  4 2005 15:05:26
+   x4    SB7 Mar  9 2005 15:20:35
+   x4    SB7 May 23 2005 15:14:32
+   x5    SB7 May 24 2005 17:13:58
+   x4    SB7 Oct  9 2005 15:56:47
+
+==============================================================
+EMPTY SECTIONS AND PLACEHOLDERS
+==============================================================
+   TO7EV     /ETC.AFS      12288 bytes -- an AFS holding one dummy member
+   TO7EV     /SCE_08.AFS   12288 bytes -- an AFS holding one dummy member
+   TO7EV     /SCE_09.AFS   12288 bytes -- an AFS holding one dummy member
+   TO7EV     /SCE_11.AFS   12288 bytes -- an AFS holding one dummy member
+   TO7EV     /SCE_12.AFS   12288 bytes -- an AFS holding one dummy member
+   Every AFS on the disc opens with a dmy.adx / dummy.adx placeholder.
+   SCE_01..SCE_12 is a twelve-slot scenario index with four slots empty.
+
+==============================================================
+THIRTY-SIX OVERLAYS IN NINE CONFIGURATIONS
+==============================================================
+Metrowerks MWo3 overlays, four roles x nine prefixes, all 36 distinct.
+Each carries its own build name in its header.
+   /OV_DVD_BTL.OVL            571904 bytes
+   /OV_DVD_FIELD.OVL          665984 bytes
+   /OV_DVD_SFD.OVL            268800 bytes
+   /OV_DVD_SKIT.OVL           215936 bytes
+   /OV_D_BTL.OVL              740352 bytes
+   /OV_D_FIELD.OVL            738944 bytes
+   /OV_D_SFD.OVL               32512 bytes
+   /OV_D_SKIT.OVL             244480 bytes
+   /OV_FR_BTL.OVL             571904 bytes
+   /OV_FR_FIELD.OVL           665984 bytes
+   /OV_FR_SFD.OVL             268800 bytes
+   /OV_FR_SKIT.OVL            215936 bytes
+   /OV_F_DVD_BTL.OVL          560768 bytes
+   /OV_F_DVD_FIELD.OVL        637312 bytes
+   /OV_F_DVD_SFD.OVL          268800 bytes
+   /OV_F_DVD_SKIT.OVL         215552 bytes
+   /OV_MD_BTL.OVL             747264 bytes
+   /OV_MD_FIELD.OVL           772992 bytes
+   /OV_MD_SFD.OVL             268800 bytes
+   /OV_MD_SKIT.OVL            247552 bytes
+   /OV_PDVD_BTL.OVL           520704 bytes
+   /OV_PDVD_FIELD.OVL         492416 bytes
+   /OV_PDVD_SFD.OVL           268800 bytes
+   /OV_PDVD_SKIT.OVL          206976 bytes
+   /OV_PFR_BTL.OVL            520704 bytes
+   /OV_PFR_FIELD.OVL          492416 bytes
+   /OV_PFR_SFD.OVL            268800 bytes
+   /OV_PFR_SKIT.OVL           206976 bytes
+   /OV_P_S_DVD_BTL.OVL        520704 bytes
+   /OV_P_S_DVD_FIELD.OVL      492416 bytes
+   /OV_P_S_DVD_SFD.OVL        268800 bytes
+   /OV_P_S_DVD_SKIT.OVL       206976 bytes
+   /OV_R_BTL.OVL              429312 bytes
+   /OV_R_FIELD.OVL            331904 bytes
+   /OV_R_SFD.OVL               32512 bytes
+   /OV_R_SKIT.OVL             355200 bytes
+
+==============================================================
+A SONY SDK MODULE FIVE YEARS OLD
+==============================================================
+   /MEM2MB.IRX  1425 bytes  2000-04-25 16:15:40 +36
+   Every other file on the disc is 2005.  This one is 2000-04-25, and
+   it is the oldest timestamp in the file system by four years nine
+   months.
+
+==============================================================
+THE END ROLL SHIPPED AS EDITABLE PLAIN TEXT
+==============================================================
+   TO7ROOT:/TOAEND_JP.TXT, 12,397 bytes, 1,274 CRLF lines, 732 of them
+   non-blank, Shift-JIS, with @-prefixed layout codes (@s4, @o0, @h).
+   It is the staff credit roll, not compiled into anything.

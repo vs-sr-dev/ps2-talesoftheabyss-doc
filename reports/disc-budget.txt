@@ -1,0 +1,40 @@
+IMAGE                        4357816320 bytes
+  named files                4336242202   99.50%
+  outside the volumes           5959194   0.14%
+  the nine CVM volumes       4330283008   99.37%
+  image slack                  21574118   0.4951%
+
+INSIDE THE VOLUMES
+  payload accounted for      4237289829   97.23% of the image
+  container/slack              92993179   2.13%
+
+BY CLASS                          BYTES OF IMAGE
+  codec block                1069195048   24.54%
+  AHX                         985237321   22.61%
+  MPEG-PS (Sofdec)            981364736   22.52%
+  ADX                         720509996   16.53%
+  ?                           393067243    9.02%
+  iSE2                         30363872    0.70%
+  TIM2                         18538720    0.43%
+  MWo3 overlay                 14536192    0.33%
+  PAC!                          9094336    0.21%
+  SB7                           7494376    0.17%
+  zero-lead                     7167112    0.16%
+  ELF                            448129    0.01%
+  FPS2                            95808    0.00%
+  FPS3                            66140    0.00%
+  VSSVER.SCC                      46512    0.00%
+  DBS!                            31808    0.00%
+  RCP!                            22736    0.00%
+  HAD!                             9744    0.00%
+
+GROUPED                           BYTES OF IMAGE
+  compressed game data       1069195048   24.54%
+  voice                       985237321   22.61%
+  video                       981364736   22.52%
+  audio (ADX)                 720509996   16.53%
+  other game data             462444008   10.61%
+  texture                      18538720    0.43%
+
+  video + voice              1966602057   45.13%
+  all media                  2687112053   61.66%

@@ -1,0 +1,19 @@
+Reference decoder self-test -- tools/tales_block.py --selftest
+
+md5 of the copy in this repository:
+e2dcd6b8dc717b84f67bf8a46568298c *tools/tales_block.py
+
+It is byte-identical to tales-blockcodec-doc's own copy, which is the point:
+the census in reports/codec-census.txt was produced by the published
+instrument, not by a variant of it.
+
+  psx  run    -> b'ABCDEFGH'            ok
+  snes run    -> b'ABCDEFGH'            ok
+  psx  run    -> b'ZZZZ'                ok
+  snes run    -> b'ZZZZ'                ok
+  psx  run    -> b'wwwwwwwwwwwwwwwwwww' ok
+  snes run    -> b'wwwwwwwwwwwwwwwwwww' ok
+  psx  lzss   -> 19 bytes
+  short runs 4..18 agree across dialects
+  long runs 19..274 agree across dialects
+selftest passed

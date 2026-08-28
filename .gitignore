@@ -1,0 +1,25 @@
+# No game data of any kind is committed to this repository.
+_work/
+*.iso
+*.zip
+*.CVM
+*.cvm
+*.IRX
+*.irx
+*.IMG
+*.img
+*.BIN
+*.bin
+*.AFS
+*.afs
+*.SFD
+*.sfd
+*.adx
+*.ADX
+*.ahx
+*.AHX
+SLPS_*
+SYSTEM.CNF
+VENUS.ELF
+__pycache__/
+*.pyc

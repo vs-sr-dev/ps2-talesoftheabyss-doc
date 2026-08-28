@@ -1,0 +1,134 @@
+swept 4357816320 bytes of abyss.iso in 153.1 s
+(4357816320 bytes on disc)
+
+PATTERN                   HITS  FIRST OFFSETS / WHAT IT WOULD MEAN
+MSCF                        10  0x3EBECE51 0x48BA00FB 0x6A4341BC 0x6B397EA0
+CVMH                        11  0x63E000 0x122C8F16 0x3AE31800 0x43515800
+ROFSBLD                      9  0x63E038 0x3AE31838 0x43515838 0x45A3E838
+SAMPLE_GAME_TITLE           18  0x647828 0x6478BE 0x3AE3B028 0x3AE3B0BE
+PUBLISHER_NAME              18  0x64793E 0x6479BE 0x3AE3B13E 0x3AE3B1BE
+CRI                         81  0x578BD8 0x57C119 0x61D580 0x61D5B0
+SCPK                         2  0x8A3D6D5B 0x99F68A93
+THEIRSCE                     0  Rebirth's per-bundle scenario chunk, 2004
+h4m                        409  0xEF927D 0x13F6DC8 0x8B5F754 0xAA30EA1
+AFS\x00                     37  0x574B86 0x574BB7 0x57A478 0x150F18EE
+CPS\x00                      5  0x12B20754 0x12B92FFD 0x1AF7EF92 0xC9FF1F4B
+ADX                        597  0x523919 0x57491B 0x574C40 0x574C60
+@UTF                         2  0x52C2C463 0xC2D96CE1
+KORG                         0  the sound driver this disc ships on the I/O processor
+FILE.FPB                     0  Destiny 2's container name, 2002
+TIM2                       891  0x575148 0x43571000 0x44930000 0x44932800
+VAGp                         0  headered SPU audio
+\x00\x00\x01º           479346  0x64A000 0x64A800 0x64B000 0x64B800
+host0:                       3  0xB9098 0x5748A0 0x5748E0
+hostfs                       0  ditto
+mass:                        0  devkit mass storage
+MW MIPS                    845  0xD6AD4 0xD6BBE 0xD6C7D 0xD6E04
+CodeWarrior                  0  ditto
+GCC                       1316  0x57A2C1 0x57AAA1 0x57C155 0x61E089
+Symphonia                    0  Tales of Symphonia, 2003/2004
+symphonia                    0  ditto, lower case
+destiny                      0  Tales of Destiny, 1997 / Destiny 2, 2002
+DESTINY                      0  ditto, upper case
+TOD2                         1  0xD47813DE
+tod2                         1  0x9DB8EA81
+TOP2                        25  0x1F19F20D 0x1F1A0DE8 0x1F1A6FC3 0x1F1D961B
+top2                         2  0x9003DAFD 0xA1D2C5D2
+eternia                      0  Tales of Eternia, 2000
+phantasia                    0  Tales of Phantasia, 1995
+Venus                        0  Venus & Braves, shipped whole on the 2002 disc
+rebirth                      0  Tales of Rebirth, 2004
+REBIRTH                      0  ditto, upper case
+ToR                        174  0x241F43E 0x5BB5CB5 0x5EF13D7 0x61AA484
+legendia                     0  Tales of Legendia, 2005 -- four months before this disc
+LEGENDIA                     0  ditto, upper case
+Legendia                     0  ditto, mixed case
+ToL                        178  0x2CB47C7 0x2E0DF89 0x2E75323 0x6491196
+TOL                        419  0x14B949E3 0x183F1ADC 0x1853CF32 0x186D9747
+tox                        151  0x118A829 0x2DFD23E 0x4FB53E5 0x58FF193
+TLPS                         0  Legendia's AHX wrapper chunk
+TLPK                         4  0x3B44DAD1 0x86BB0891 0x873BF9D2 0x9B59D443
+CPS                          2  0x2946CE6B 0x45C1CF95
+abyss                        1  0x591400
+ABYSS                        0  ditto, upper case
+Abyss                        0  ditto, mixed case
+TO7                        999  0x82881 0x828BD 0x828F9 0x829E9
+to7                        138  0x574C24 0x574D0C 0x574D24 0x574D3C
+TO8                        186  0x31F01F1 0x325EFAD 0x3967483 0x53CE7FD
+FPS3                      2198  0x5752D8 0x575311 0x3AED080A 0x3AEF780A
+FPS2                       639  0x580160 0x583B6740 0x856EE00A 0x857BE00A
+FPS4                         2  0x4BC7BE5E 0xFB3C827E
+VSSVER                       9  0x649D29 0x3AE44CF3 0x43521CDB 0x45A4BC73
+SourceSafe                   0  ditto, spelled out
+.pdb                         0  a debugger symbol path
+Namco                        0  the publisher, mixed case
+NAMCO                        4  0x813E 0x82BE 0x43521BBB 0x45A4B87D
+
+real	2m33.157s
+user	0m0.015s
+sys	0m0.000s
+
+==============================================================
+EVERY NON-ZERO LINE, LOCATED AND READ  (tools/locate.py)
+==============================================================
+Expected noise in 4,357,816,320 bytes: a four-byte pattern occurs about 1.01
+times by chance, a three-byte pattern about 260, a seven-byte pattern about
+once in 65 million discs.  Read every line against that.
+
+MSCF                10  four-byte; all ten inside Sofdec and ADX payload.
+CVMH                11  nine are the nine volume headers at their file
+                        offsets; two fall inside compressed payload.
+ROFSBLD              9  exactly the nine volumes.  No tenth builder stamp.
+SAMPLE_GAME_TITLE   18  nine volumes x two descriptors.  CRI's default,
+PUBLISHER_NAME      18  unfilled, on every one -- as on Symphonia's nine.
+SCPK                 2  four-byte; both inside compressed .PKB payload
+                        (0x8A3D6D5B in CHU_I00_02.PKB, 0x99F68A93 in
+                        SAI_I03.PKB).  Not a 2002 bundle.
+THEIRSCE             0  Rebirth's scenario chunk is not here.
+FILE.FPB             0  Destiny 2's container name is not here.
+VAGp                 0  no headered SPU audio anywhere.
+KORG                 0  Legendia's sound house is not on this disc.
+h4m                409  three-byte, expected ~260; same order as noise.
+AFS\0               37  seventeen are the archives; the rest are the string
+                        "AFS" inside the executable and inside payload.
+CPS\0                5  four-byte, expected ~1.  All five located: three in
+CPS(space)           2  Sofdec payload (AS_007.SFD twice, AS_009.SFD), one in
+                        an ADX (TOA_SFXBGM_E013.ADX), one in OP.SFD and one in
+                        CHT.AFS.  Not one is a sixteen-byte header.
+TLPS                 0  Legendia's AHX wrapper chunk is not here.
+TLPK                 4  four-byte, expected ~1.  All four inside compressed
+                        payload: CHT_036.SKT, BAS_T00E.PKB, CAP_I02.PKB,
+                        SEA_D11.PKB.  Legendia's package tag is not here.
+TOP2                25  four-byte, expected ~1 -- and this is the only line
+                        that looked like a finding.  It is not: every hit is
+                        inside one file, AS_009.SFD, and the 48-byte window
+                        around each is byte-for-byte identical to the others.
+                        One repeating pattern in one 214 MB video stream.
+TOD2 / tod2       1 / 1  four-byte, expected ~1 each.  Noise.
+ToR                174  three-byte, expected ~260.  Below noise.
+ToL / TOL / tox 178/419/151  three-byte, expected ~260.  ToL and tox below
+                        it; TOL above it by 1.6x, which is what an uppercase
+                        trigram does in a corpus with this much high-entropy
+                        data.  No hit is a project tag.
+Symphonia, symphonia, destiny, DESTINY, eternia, phantasia, Venus,
+rebirth, REBIRTH, legendia, LEGENDIA, Legendia, Abyss, ABYSS   all 0.
+abyss                1  a BGM title in the sound-test string table inside
+                        SLPS_255.86.  See reports/leftovers.txt.
+MW MIPS            845  seven-byte, so not noise at any rate.  113 in CEI.IRX,
+                        85 in PFM.IRX, 74 in SDM.IRX and 572 inside
+                        TO7ROOT.CVM (the overlays and the .IRX copies), one in
+                        the executable's .comment.  Every one is a per-object
+                        compiler stamp that was never merged.
+CodeWarrior          0
+GCC               1316  three-byte; three real ones in the executable
+                        ("Append: GCC2096 SCE3020") and one in IRXARC.BIN.
+                        The rest are inside compressed and video payload.
+host0:               3  two in the executable naming I/O processor images,
+                        one at 0xB9098 inside IOPRP300.IMG.
+hostfs, mass:        0
+FPS3 / FPS2   2198/639  the disc's own archive headers.
+FPS4                 2  four-byte, expected ~1.  The later revision of the
+                        same format is not used here.
+VSSVER               9  nine Visual SourceSafe status files, one per volume
+                        that has one.
+NAMCO                4  two in the ISO publisher field, two in payload.

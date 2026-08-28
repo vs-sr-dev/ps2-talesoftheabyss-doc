@@ -1,0 +1,163 @@
+Containers -- tools/cvm.py, tools/cvm_census.py, tools/fps.py
+
+The disc has sixteen files in a flat root and nine of them are CRI ROFS
+volumes.  Everything the game loads is inside one of those nine.
+
+==============================================================
+THE NINE CVM HEADERS
+==============================================================
+container            TO7ROOT.CVM
+file size            38965248 bytes
+header size field    2036
+volume size field    38965248
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         19023 sectors
+contents             216 files, 38732384 bytes
+
+container            TO7FIELD.CVM
+file size            566595584 bytes
+header size field    2036
+volume size field    566595584
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         276655 sectors
+contents             75 files, 566476350 bytes
+
+container            TO7MAP.CVM
+file size            481185792 bytes
+header size field    2036
+volume size field    481185792
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         234951 sectors
+contents             630 files, 480479695 bytes
+
+container            TO7BTL.CVM
+file size            271828992 bytes
+header size field    2036
+volume size field    271828992
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         132726 sectors
+contents             56 files, 271730686 bytes
+
+container            TO7NPC.CVM
+file size            155258880 bytes
+header size field    2036
+volume size field    155258880
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         75807 sectors
+contents             1054 files, 154126300 bytes
+
+container            TO7EV.CVM
+file size            1070188544 bytes
+header size field    2036
+volume size field    1070188544
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         522550 sectors
+contents             140 files, 1069993606 bytes
+
+container            TO7MOV.CVM
+file size            981415936 bytes
+header size field    2036
+volume size field    981415936
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         479204 sectors
+contents             28 files, 981365136 bytes
+
+container            TO7BGM.CVM
+file size            623400960 bytes
+header size field    2036
+volume size field    623400960
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         304392 sectors
+contents             149 files, 623326150 bytes
+
+container            TO7SE.CVM
+file size            141443072 bytes
+header size field    2036
+volume size field    141443072
+file system          ROFS
+built by             ROFSBLD Ver.1.52 2003-06-09
+volume id            SAMPLE_GAME_TITLE
+publisher            PUBLISHER_NAME
+application          
+created              2005112523440100$
+volume space         69061 sectors
+contents             699 files, 140600457 bytes
+
+==============================================================
+PER-VOLUME MEMBER CENSUS, WITH THE DATE RANGE
+==============================================================
+VOLUME     MEMBERS          BYTES  EARLIEST             LATEST
+TO7ROOT        216       38732384  2000-04-25 16:15:40  2005-11-25 22:37:58
+TO7FIELD        75      566476350  2005-10-05 12:05:23  2005-11-24 18:17:52
+TO7MAP         630      480479695  2005-10-05 12:05:32  2005-11-24 18:18:00
+TO7BTL          56      271730686  2005-02-03 10:02:04  2005-11-24 18:09:22
+TO7NPC        1054      154126300  2005-09-01 12:54:45  2005-11-18 14:38:40
+TO7EV          140     1069993606  2005-10-05 12:04:02  2005-11-10 13:57:37
+TO7MOV          28      981365136  2005-05-09 23:43:00  2005-10-24 10:47:28
+TO7BGM         149      623326150  2005-10-05 12:02:38  2005-10-21 11:22:56
+TO7SE          699      140600457  2005-07-15 12:42:12  2005-11-11 21:01:22
+TOTAL         3047     4326830764
+
+==============================================================
+MEMBERS BY CLASS -- classified from the first bytes, never the name
+==============================================================
+KIND               MEMBERS            BYTES
+AFS                     17       1101207552
+MPEG-PS (Sofdec)        27        981364736
+?                      265        783306031
+ADX                    136        621249286
+codec block           1165        581962290
+FPS3                  1044        154310444
+iSE2                   158         30363872
+FPS2                    43         19175168
+TIM2                    30         17075856
+MWo3 overlay            36         14536192
+PAC!                    36          9094336
+zero-lead               20          7166000
+SB7                      5          5461672
+ELF                      7           448129
+VSSVER.SCC               9            46512
+DBS!                    16            31808
+RCP!                    17            21136
+HAD!                    16             9744
+TOTAL                 3047       4326830764

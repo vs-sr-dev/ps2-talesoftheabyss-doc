@@ -1,0 +1,64 @@
+Audio and video census -- tools/media_census.py
+
+Classified by magic, never by name.  ADX and AHX both begin 80 00 and are
+told apart by the codec byte at +4, which matters here: the AFS directories
+name voice lines *.ahx and music cues *.ADX and a name-based census would
+still be right for those two but wrong for the 1,025 members of SE.AFS.
+
+SOFDEC VIDEO -- 27 streams, 981364736 bytes
+  9 x  512x448  4:3  29.97 fps  1800000 bit/s
+  8 x  512x448  4:3  30 fps  3600000 bit/s
+  4 x  512x448  12  29.97 fps  104857200 bit/s
+  3 x  640x480  12  29.97 fps  104857200 bit/s
+  2 x  512x448  12  30 fps  104857200 bit/s
+  1 x  512x448  4:3  30 fps  4500000 bit/s
+  TO7MOV    AS_009.SFD            213897216  475.3 s at declared rate
+  TO7MOV    OP.SFD                108126208  8.2 s at declared rate
+  TO7MOV    AS_001.SFD             91256832  162.2 s at declared rate
+  TO7MOV    AS_006.SFD             83871744  186.4 s at declared rate
+  TO7MOV    AS_008.SFD             83347456  185.2 s at declared rate
+  TO7MOV    AS_005.SFD             49664000  110.4 s at declared rate
+  TO7MOV    AS_007.SFD             47888384  106.4 s at declared rate
+  TO7MOV    S101.SFD               44201984  3.4 s at declared rate
+
+ADX -- 3182 streams, 720509996 bytes
+  channels {1: 2816, 2: 366}
+  rates    {48000: 1121, 24000: 1877, 22050: 184}
+  total playing time 4.62 hours (from the headers' sample counts)
+
+AHX -- 12643 streams, 985237321 bytes
+  distinct first-frame headers {'ff f5 e0 c0': 12643}
+  MPEG-2 LSF layer II, 160000 bit/s, 22050 Hz, mono
+  total playing time 13.60 hours (from the frame count)
+
+VOLUME          SFD      ADX      AHX            BYTES
+TO7BTL            0     2006        0         58815662
+TO7EV             0     1040    12643       1025682369
+TO7MOV           27        0        0        981364736
+TO7BGM            0      136        0        621249286
+
+==============================================================
+DUPLICATE MEMBERS ACROSS THE SEVENTEEN AFS ARCHIVES
+==============================================================
+ARCHIVE      MEMBERS DISTINCT REPEATS WASTED BYTES
+CHT.AFS          538     506      32       371637
+ETC.AFS            1       1       0            0
+SCE_01.AFS      1754    1754       0            0
+SCE_02.AFS      1730    1726       4       192275
+SCE_03.AFS      1801    1801       0            0
+SCE_04.AFS      1470    1470       0            0
+SCE_05.AFS       867     865       2       236468
+SCE_06.AFS      1224    1224       0            0
+SCE_07.AFS      1320    1320       0            0
+SCE_08.AFS         1       1       0            0
+SCE_09.AFS         1       1       0            0
+SCE_10.AFS      1921    1919       2         2244
+SCE_11.AFS         1       1       0            0
+SCE_12.AFS         1       1       0            0
+SE.AFS          1025     405     620      8696336
+SYS.AFS           28      26       2         2244
+BTL.AFS         2006    1923      83       698678
+TOTAL          15689   14944     745     10199882
+
+611 of SE.AFS's 1,025 members are the same 13,810-byte dummy.adx, stored
+611 separate times at 611 separate offsets.

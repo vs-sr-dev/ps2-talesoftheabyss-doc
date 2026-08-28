@@ -1,0 +1,165 @@
+Decoder lineage -- tools/prefix_scan.py and tools/decoder_lineage.py
+
+Needles are taken from SLPS_255.86 and searched, at any alignment, through
+whole executables, without telling the tool where to look.  Targets:
+
+  SLPS_255.33  Tales of Legendia,   PlayStation 2, 2005-07  R5900
+  SLPS_254.50  Tales of Rebirth,    PlayStation 2, 2004-11  R5900
+  SLPS_254.00  Tales of Symphonia,  PlayStation 2, 2004-08  R5900
+  SLPS_251.72  Tales of Destiny 2,  PlayStation 2, 2002-11  R5900
+  VENUS.ELF    Venus & Braves promo build, 2003        R5900
+               -- the corpus's negative control: no decoder in it at all
+  SLPS_030.50  Tales of Eternia,    PlayStation,   2000    R3000A
+  SLPS_011.00  Tales of Destiny,    PlayStation,   1997    R3000A
+
+==============================================================
+THE DECODER -- 872 bytes from 0x00122230, the length Legendia used
+==============================================================
+needle  SLPS_255.86  va 0x00122230  file 0x22330  872 bytes
+longest run of those bytes appearing anywhere in:
+  SLPS_254.00           69 bytes  (needle+24, SLPS_254.00+0x142D80)
+  SLPS_255.33           18 bytes  (needle+6, SLPS_255.33+0x1BE102)
+  SLPS_254.50           14 bytes  (needle+716, SLPS_254.50+0x7F548)
+  SLPS_251.72           12 bytes  (needle+716, SLPS_251.72+0x44C4C)
+  VENUS.ELF             14 bytes  (needle+716, VENUS.ELF+0x1DD330)
+  SLPS_030.50           11 bytes  (needle+712, SLPS_030.50+0xAC104)
+  SLPS_011.00           10 bytes  (needle+862, SLPS_011.00+0xE7460)
+
+==============================================================
+THE WHOLE CODEC REGION -- 1,896 bytes from 0x00122150
+==============================================================
+needle  SLPS_255.86  va 0x00122150  file 0x22250  1896 bytes
+longest run of those bytes appearing anywhere in:
+  SLPS_254.00           69 bytes  (needle+248, SLPS_254.00+0x142D80)
+  SLPS_255.33           28 bytes  (needle+1096, SLPS_255.33+0x4C758)
+  SLPS_254.50           17 bytes  (needle+155, SLPS_254.50+0x9D01B)
+  SLPS_251.72           14 bytes  (needle+158, SLPS_251.72+0x30E66)
+  VENUS.ELF             17 bytes  (needle+155, VENUS.ELF+0x25CD7F)
+
+==============================================================
+THE C RUNTIME CONTROL -- 872 bytes from 0x0028FF18
+the Emotion Engine SDK's quadword memcpy, the routine the stored
+path calls.  Same length, same tool, same targets.
+==============================================================
+needle  SLPS_255.86  va 0x0028FF18  file 0x190018  872 bytes
+longest run of those bytes appearing anywhere in:
+  SLPS_254.00          632 bytes  (needle+0, SLPS_254.00+0x22E70)
+  SLPS_255.33          632 bytes  (needle+0, SLPS_255.33+0x8FD0)
+  SLPS_254.50          136 bytes  (needle+256, SLPS_254.50+0xC0B84)
+  SLPS_251.72          164 bytes  (needle+440, SLPS_251.72+0x909A8)
+  VENUS.ELF            436 bytes  (needle+0, VENUS.ELF+0x290844)
+  SLPS_030.50           11 bytes  (needle+801, SLPS_030.50+0x77635)
+  SLPS_011.00           11 bytes  (needle+801, SLPS_011.00+0xC4215)
+
+==============================================================
+AND WIDENED UNTIL THE ANSWER STOPS GROWING
+==============================================================
+--- needle 2048 bytes ---
+needle  SLPS_255.86  va 0x0028FF18  file 0x190018  2048 bytes
+longest run of those bytes appearing anywhere in:
+  SLPS_254.00          632 bytes  (needle+0, SLPS_254.00+0x22E70)
+  SLPS_255.33          632 bytes  (needle+0, SLPS_255.33+0x8FD0)
+  VENUS.ELF            436 bytes  (needle+0, VENUS.ELF+0x290844)
+--- needle 8192 bytes ---
+needle  SLPS_255.86  va 0x0028FF18  file 0x190018  8192 bytes
+longest run of those bytes appearing anywhere in:
+  SLPS_254.00          632 bytes  (needle+0, SLPS_254.00+0x22E70)
+  SLPS_255.33          632 bytes  (needle+0, SLPS_255.33+0x8FD0)
+  VENUS.ELF            436 bytes  (needle+0, VENUS.ELF+0x290844)
+
+==============================================================
+WHICH OF SYMPHONIA'S TWO DECODERS  (tools/decoder_lineage.py)
+==============================================================
+SLPS_254.00 carries the codec four times, in two unrelated pairs.
+gc-talesofsymphonia-doc reports 2 identical words in 276 between them.
+
+--- Abyss method 3 vs Symphonia's FIRST pair (the 4080 bzero one) ---
+A                _work/files/SLPS_255.86 @ 0x00122230
+B                _work/ctl/SLPS_254.00 @ 0x001C93D0
+words compared   200
+identical words  1 (0.5%)
+longest identical run 1 words / 4 bytes
+same opcode      27 (13.5%)
+opcode sequence  17.5% similar (ignoring registers and scheduling)
+
+--- Abyss method 3 vs Destiny 2's Emotion Engine decoder ---
+A                _work/files/SLPS_255.86 @ 0x00122230
+B                _work/ctl/SLPS_251.72 @ 0x0010A1B0
+words compared   200
+identical words  2 (1.0%)
+longest identical run 1 words / 4 bytes
+same opcode      33 (16.5%)
+opcode sequence  6.0% similar (ignoring registers and scheduling)
+
+--- Abyss method 3 vs Symphonia's SECOND pair, aligned on the zero loop ---
+A                _work/files/SLPS_255.86 @ 0x00122248
+B                _work/ctl/SLPS_254.00 @ 0x00242C80
+words compared   200
+identical words  31 (15.5%)
+longest identical run 17 words / 68 bytes
+same opcode      113 (56.5%)
+opcode sequence  43.0% similar (ignoring registers and scheduling)
+
+--- Abyss method 1 vs Symphonia's second pair, same alignment ---
+A                _work/files/SLPS_255.86 @ 0x001225C8
+B                _work/ctl/SLPS_254.00 @ 0x00243270
+words compared   190
+identical words  27 (14.2%)
+longest identical run 17 words / 68 bytes
+same opcode      74 (38.9%)
+opcode sequence  76.8% similar (ignoring registers and scheduling)
+
+--- the dispatchers, whole ---
+#      A                                            B                                            VERDICT
+0      0x00122150 addiu    sp, sp, -4144             0x00242B70 addiu    sp, sp, -4144             identical
+1      0x00122154 addiu    v0, zero, 3               0x00242B74 addiu    v0, zero, 2               same opcode
+2      0x00122158 sd       ra, 0(sp)                 0x00242B78 sd       ra, 0(sp)                 identical
+3      0x0012215C lbu      t1, 2(a1)                 0x00242B7C lbu      t0, 2(a1)                 same opcode
+4      0x00122160 lbu      a3, 3(a1)                 0x00242B80 lbu      a3, 3(a1)                 identical
+5      0x00122164 lbu      a2, 4(a1)                 0x00242B84 lbu      a2, 4(a1)                 identical
+6      0x00122168 lbu      t0, 1(a1)                 0x00242B88 lbu      t1, 1(a1)                 same opcode
+7      0x0012216C lbu      v1, 0(a1)                 0x00242B8C lbu      v1, 0(a1)                 identical
+8      0x00122170 sll      t1, t1, 8                 0x00242B90 sll      t0, t0, 8                 same opcode
+9      0x00122174 sll      a3, a3, 16                0x00242B94 sll      a3, a3, 16                identical
+10     0x00122178 sll      a2, a2, 24                0x00242B98 sll      a2, a2, 24                identical
+11     0x0012217C addu     t0, t0, t1                0x00242B9C addu     t0, t1, t0                same opcode
+12     0x00122180 addu     a3, a3, t0                0x00242BA0 addu     a3, a3, t0                identical
+13     0x00122184 beq      v1, v0, 0x001221D0        0x00242BA4 beq      v1, v0, 0x00242C40        same opcode
+14     0x00122188 addu     a2, a2, a3                0x00242BA8 addu     a2, a2, a3                identical
+15     0x0012218C addiu    v0, zero, 1               0x00242BAC addiu    v0, zero, 3               same opcode
+16     0x00122190 beq      v1, v0, 0x001221B8        0x00242BB0 beq      v1, v0, 0x00242C20        same opcode
+17     0x00122194 addu     v0, a1, a2                0x00242BB4 addiu    v0, zero, 1               
+18     0x00122198 beq      v1, zero, 0x001221A8      0x00242BB8 beq      v1, v0, 0x00242C00        same opcode
+19     0x0012219C nop                                0x00242BBC nop                                identical
+20     0x001221A0 beq      zero, zero, 0x001221F4    0x00242BC0 beq      v1, zero, 0x00242BD0      same opcode
+21     0x001221A4 addiu    v0, zero, -1              0x00242BC4 nop                                
+22     0x001221A8 jal      0x0028FF18                0x00242BC8 beq      zero, zero, 0x00242C40    
+23     0x001221AC addiu    a1, a1, 9                 0x00242BCC nop                                
+24     0x001221B0 beq      zero, zero, 0x001221E8    0x00242BD0 beq      a2, zero, 0x00242C48      same opcode
+25     0x001221B4 daddu    a0, zero, zero            0x00242BD4 addiu    a1, a1, 9                 
+26     0x001221B8 addiu    a3, sp, 16                0x00242BD8 lbu      v0, 0(a1)                 
+27     0x001221BC addiu    a2, v0, 9                 0x00242BDC addiu    a2, a2, -1                same opcode
+28     0x001221C0 jal      0x001225B0                0x00242BE0 sb       v0, 0(a0)                 
+29     0x001221C4 addiu    a1, a1, 9                 0x00242BE4 addiu    a1, a1, 1                 same opcode
+30     0x001221C8 beq      zero, zero, 0x001221E4    0x00242BE8 addiu    a0, a0, 1                 
+31     0x001221CC nop                                0x00242BEC bne      a2, zero, 0x00242BD8      
+32     0x001221D0 addu     v0, a1, a2                0x00242BF0 nop                                
+33     0x001221D4 addiu    a3, sp, 16                0x00242BF4 beq      zero, zero, 0x00242C48    
+34     0x001221D8 addiu    a2, v0, 9                 0x00242BF8 nop                                
+35     0x001221DC jal      0x00122230                0x00242BFC nop                                
+36     0x001221E0 addiu    a1, a1, 9                 0x00242C00 addu     v0, a1, a2                
+37     0x001221E4 daddu    a0, zero, zero            0x00242C04 addiu    a2, v0, 9                 
+38     0x001221E8 jal      0x00103120                0x00242C08 addiu    a1, a1, 9                 
+39     0x001221EC nop                                0x00242C0C jal      0x00243250                
+40     0x001221F0 daddu    v0, zero, zero            0x00242C10 addiu    a3, sp, 16                
+41     0x001221F4 ld       ra, 0(sp)                 0x00242C14 beq      zero, zero, 0x00242C48    
+42     0x001221F8 jr       ra                        0x00242C18 nop                                
+43     0x001221FC addiu    sp, sp, 4144              0x00242C1C nop                                
+
+A                _work/files/SLPS_255.86 @ 0x00122150
+B                _work/ctl/SLPS_254.00 @ 0x00242B70
+words compared   44
+identical words  10 (22.7%)
+longest identical run 2 words / 8 bytes
+same opcode      23 (52.3%)
+opcode sequence  68.2% similar (ignoring registers and scheduling)

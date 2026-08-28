@@ -1,0 +1,159 @@
+Cross-title carry -- what this disc holds from other Tales titles
+
+==============================================================
+1. THE tor_ SOUND EFFECTS IN TO7EV:/SE.AFS
+==============================================================
+SE.AFS: 1025 members
+PREFIX          N  EARLIEST              LATEST
+dummy.adx     611  2005-08-26 11:12:04   2005-08-26 11:12:04
+toa           211  2005-08-26 11:12:00   2005-08-26 11:12:58
+tor           109  2005-08-26 11:12:04   2005-08-26 11:14:14
+sfxse          94  2005-08-26 11:12:12   2005-08-26 11:12:20
+
+the 109 tor_ members:
+    tor_no_se_bt_effect0.adx
+    tor_no_se_bt_effect1.adx
+    tor_no_se_bt_flag1.adx
+    tor_no_se_bt_fresh1.adx
+    tor_no_se_bt_gas0.adx
+    tor_no_se_bt_iron2.adx
+    tor_no_se_bt_leaf0.adx
+    tor_no_se_bt_mag_burn0.adx
+    tor_no_se_bt_mag_flare0.adx
+    tor_no_se_bt_mag_flash1.adx
+    tor_no_se_bt_mag_gale0.adx
+    tor_no_se_bt_mag_rise1.adx
+    tor_no_se_bt_mag_stone0.adx
+    tor_no_se_bt_poison0.adx
+    tor_no_se_bt_slash1.adx
+    tor_no_se_bt_swi_card0.adx
+    tor_no_se_bt_swi_knuckle0.adx
+    tor_no_se_bt_swi_rod1.adx
+    tor_no_se_bt_wood1.adx
+    tor_no_se_ev_act_book_a.adx
+    tor_no_se_ev_act_door_b.adx
+    tor_no_se_ev_act_door_j.adx
+    tor_no_se_ev_act_down_etc.adx
+    tor_no_se_ev_act_drop_knife.adx
+    tor_no_se_ev_act_etc_b.adx
+    tor_no_se_ev_act_etc_d.adx
+    tor_no_se_ev_act_etc_h.adx
+    tor_no_se_ev_act_hand_c.adx
+    tor_no_se_ev_act_hand_e.adx
+    tor_no_se_ev_act_mil_sword.adx
+    tor_no_se_ev_act_stab.adx
+    tor_no_se_ev_act_stand_c.adx
+    tor_no_se_ev_act_sword_b.adx
+    tor_no_se_ev_act_whistle_mouth.a
+    tor_no_se_ev_bels_gaya00.adx
+    tor_no_se_ev_efc_barriaer_repel.
+    tor_no_se_ev_efc_big_bell.adx
+    tor_no_se_ev_efc_burning_a.adx
+    tor_no_se_ev_efc_burning_b.adx
+    tor_no_se_ev_efc_disappare.adx
+    tor_no_se_ev_efc_etc_a.adx
+    tor_no_se_ev_efc_etc_b.adx
+    tor_no_se_ev_efc_fire000.adx
+    tor_no_se_ev_efc_geo_effect00.ad
+    tor_no_se_ev_efc_geo_effect01.ad
+    tor_no_se_ev_efc_get_special_pow
+    tor_no_se_ev_efc_machine_c.adx
+    tor_no_se_ev_efc_pulsation.adx
+    tor_no_se_ev_efc_quake_a.adx
+    tor_no_se_ev_efc_rain_b.adx
+    tor_no_se_ev_seiju_ball00.adx
+    tor_no_se_ev_seiju_in_1on1.adx
+    tor_no_se_ev_seiju_out_1on1.adx
+    tor_no_se_mp_bird01.adx
+    tor_no_se_mp_cat.adx
+    tor_no_se_mp_dan_blsy_unlock00.a
+    tor_no_se_mp_dan_etto_break00.ad
+    tor_no_se_mp_dan_etto_burst00.ad
+    tor_no_se_mp_dan_feni_hikari_bri
+    tor_no_se_mp_dan_giri_trick_lift
+    tor_no_se_mp_dan_kabezuzu00.adx
+    tor_no_se_mp_dan_mayo_otoshi_hol
+    tor_no_se_mp_dan_mayo_wind00.adx
+    tor_no_se_mp_dan_mits_littlebang
+    tor_no_se_mp_dan_wont_fire00.adx
+    tor_no_se_mp_dan_wont_fire01.adx
+    tor_no_se_mp_dog.adx
+    tor_no_se_mp_door_close00.adx
+    tor_no_se_mp_door_close01.adx
+    tor_no_se_mp_door_open00.adx
+    tor_no_se_mp_door_open01.adx
+    tor_no_se_mp_emap_alvi_wind00.ad
+    tor_no_se_mp_emap_alvi_wind01.ad
+    tor_no_se_mp_emap_bkou_kamo00.ad
+    tor_no_se_mp_emap_etto_d00.adx
+    tor_no_se_mp_emap_lalu_d00.adx
+    tor_no_se_mp_emap_sulz_ice_break
+    tor_no_se_mp_idoor_closet_close0
+    tor_no_se_mp_idoor_closet_open00
+    tor_no_se_mp_idoor_drawer00.adx
+    tor_no_se_mp_mg1_item_clock.adx
+    tor_no_se_mp_mg1_item_comet01.ad
+    tor_no_se_mp_mg1_item_hole.adx
+    tor_no_se_mp_mg1_item_pop.adx
+    tor_no_se_mp_mg2_awa_pon.adx
+    tor_no_se_mp_mg2_gekiryu.adx
+    tor_no_se_mp_mg2_pc_jump00.adx
+    tor_no_se_mp_mg3_grass_break.adx
+    tor_no_se_mp_nele_efc_elev00.adx
+    tor_no_se_mp_nele_efc_elev01.adx
+    tor_no_se_mp_niwatori.adx
+    tor_no_se_mp_steps04.adx
+    tor_no_se_mp_steps05.adx
+    tor_no_se_mp_steps06.adx
+    tor_no_se_mp_steps07.adx
+    tor_no_se_mp_steps08.adx
+    tor_no_se_mp_steps09.adx
+    tor_no_se_mp_steps10.adx
+    tor_no_se_mp_steps12.adx
+    tor_no_se_mp_takara_bako.adx
+    tor_no_se_mp_takara_kibako.adx
+    tor_no_se_mp_twn_babi_elevator00
+    tor_no_se_mp_twn_nolz_nabegutsu0
+    tor_no_se_mp_twn_nolz_nami00.adx
+    tor_no_se_mp_twn_petn_fountain00
+
+All 105 distinct names, with the tor_ prefix stripped, were searched for
+in Tales of Rebirth's own 4,508,516,352-byte disc image.  105 of 105 are
+present.  Rebirth's own effect table at offset 0x685328F2 reads:
+   no_se_mp_steps00 no_se_mp_steps00_b no_se_mp_steps01 ... no_se_mp_steps12
+
+Six 64-byte needles taken from the middle of tor_ streams on this disc,
+and their ADX headers, appear nowhere in that image: the audio was
+re-encoded, not copied.
+
+==============================================================
+2. THE THREE GUEST BATTLE MODELS
+==============================================================
+/BTL_NANARI.SLZ      150762 bytes  2005-02-03 10:02:04  -> 223456  tags ['C_b00exc001', 'C_l00exc001', 'C_m00exc001', 'C_r00exc001']
+/BTL_RID.SLZ         259117 bytes  2005-03-10 16:46:14  -> 396928  tags ['C_b00exc000', 'C_l00exc000', 'C_m00exc000']
+/BTL_FIRIA.SLZ       147390 bytes  2005-03-22 12:41:34  -> 264224  tags ['C_b00exc002', 'C_l00exc002', 'C_m00exc002', 'C_r00exc002']
+/BTL_ASH00.SLZ       462727 bytes  2005-10-13 10:32:12  -> 640480  tags ['C_b00ash00', 'C_l00ash00', 'C_m00ash00', 'C_r00ash00']
+/BTL_LUK00.SLZ       450425 bytes  2005-10-13 10:32:22  -> 536096  tags []
+
+Nothing in SLPS_255.86 names NANARI, FIRIA or BTL_RID: zero occurrences
+across 5,086,288 bytes.  Nor does any of the 36 overlays, which between
+them list 619 distinct *.slz names.
+
+The exc series continues in TO7NPC without battle counterparts:
+   /EXC003.NPC      262084 bytes  2005-09-27 11:38:48
+   /EXC004.NPC       15784 bytes  2005-10-05 12:07:47
+   /TOL00.NPC       134412 bytes  2005-10-13 12:11:41
+
+==============================================================
+3. MEMBER-NAME PREFIX SWEEP OVER ALL 18,736 NAMES
+==============================================================
+18736 names (3,047 volume members + 15,689 AFS members)
+   toa    360  ['TOAEND_JP.TXT', 'SE.AFS/toa_sfxse_sys00_ats_01.adx']
+   tor    109  ['SE.AFS/tor_no_se_mp_steps04.adx', 'SE.AFS/tor_no_se_mp_steps12.adx']
+   tos      0  []
+   tod      0  []
+   toe      0  []
+   tol      1  ['TOL00.NPC']
+   top      0  []
+   to7      1  ['TO7PUBLIC.TXD']
+   to8      0  []

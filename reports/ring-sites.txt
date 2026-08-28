@@ -1,0 +1,178 @@
+Ring-cursor constant scan -- tools/ring_sites.py
+
+Section 7 of tales-blockcodec-doc gives 4078/4079/4080 as the shortcut and
+says to run it first, before sweeping any data.  That order is followed
+here.  All three immediates are asked for at once and the immediate is
+printed for every hit, because which one answers says which copy of the
+source a build descends from.
+
+This report adds a second pass for 4070 and 4071.  On this disc the ring
+clear is an inline byte loop unrolled by eight with a seven-byte tail, so
+the *loop bound* is 4070 or 4071 and only the *cursor* carries 4078/4079.
+The published shortcut still finds the routine -- the cursor is inside it --
+but at +135 and +139 words rather than at +10, so a reader who disassembles
+forty instructions around the hit lands past the dictionary setup entirely.
+
+==============================================================
+EMOTION ENGINE -- SLPS_255.86
+==============================================================
+_work/files/SLPS_255.86, mips, 1271360 words scanned, looking for 4078/4079/4080
+
+ADDRESS      WORD       FORM        IMM  ROUTINE
+0x0011B204   0x27A40FF0 addiu      4080  0x0011B1EC (+6 words)
+0x00122458   0x24030FEF addiu      4079  0x0012222C (+139 words)
+0x001227CC   0x24030FEE addiu      4078  0x001225B0 (+135 words)
+0x001B569C   0x30840FF0 andi       4080  0x001B52CC (+244 words)
+0x001DA7E0   0x27BD0FF0 addiu      4080  0x001DA7E4 (+-1 words)
+0x0028E448   0x66100FEF daddiu     4079  0x0028E3EC (+23 words)
+
+6 sites
+
+_work/files/SLPS_255.86, mips, 1271360 words scanned, looking for 4070/4071
+
+ADDRESS      WORD       FORM        IMM  ROUTINE
+0x00122258   0x29230FE7 slti       4071  0x0012222C (+11 words)
+0x001225D8   0x29230FE6 slti       4070  0x001225B0 (+10 words)
+
+2 sites
+
+==============================================================
+I/O PROCESSOR -- five images
+==============================================================
+### IOPRP300.IMG
+_work/files/IOPRP300.IMG, mips, 69576 words scanned, looking for 4078/4079/4080
+
+no 4078 or 4079 or 4080 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+
+no 4070 or 4071 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+### IRXARC.BIN
+_work/files/IRXARC.BIN, mips, 96512 words scanned, looking for 4078/4079/4080
+
+ADDRESS      WORD       FORM        IMM  ROUTINE
+0x0002C5AC   0x24020FF0 addiu      4080  0x0002C468 (+81 words)
+0x000458C4   0x24420FF0 addiu      4080  0x000451A8 (+455 words)
+
+2 sites
+
+
+no 4070 or 4071 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+### CEI.IRX
+_work/files/CEI.IRX, mips, 18952 words scanned, looking for 4078/4079/4080
+
+no 4078 or 4079 or 4080 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+
+no 4070 or 4071 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+### PFM.IRX
+_work/files/PFM.IRX, mips, 17924 words scanned, looking for 4078/4079/4080
+
+no 4078 or 4079 or 4080 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+
+no 4070 or 4071 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+### SDM.IRX
+_work/files/SDM.IRX, mips, 15248 words scanned, looking for 4078/4079/4080
+
+no 4078 or 4079 or 4080 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+
+no 4070 or 4071 immediate anywhere in this image.
+by section 7 of the codec specification that is evidence the
+decoder is not present, not merely that it was not found.
+
+==============================================================
+READING OF EVERY HIT
+==============================================================
+0x00122458  4079  THE METHOD-3 DECODER, at 0x0012222C.  Inline zero loop
+                  unrolled by eight bounded by 4071 plus a seven-byte tail
+                  (4,079 bytes cleared), both synthetic preload loops, ring
+                  base in a3, mask 0x0FFF, cursor at RING - 17, run escape
+                  with the +3 and the +19.
+0x001227CC  4078  THE METHOD-1 DECODER, at 0x001225B0.  Same shape, loop
+                  bounded by 4070 plus the tail (4,078 bytes cleared), cursor
+                  at RING - 18, no run escape.
+0x0011B204  4080  addiu a0, sp, 4080 -- the address of a local in a 4,112-byte
+                  stack frame.  Not a constant, an offset.
+0x001B569C  4080  andi a0, a0, 0x0FF0 -- a mask over bits 4..11, printed
+                  because the tool decodes andi immediates.  Not 4,080.
+0x001DA7E0  4080  addiu sp, sp, 4080 -- a function epilogue restoring a
+                  4,080-byte frame.
+0x0028E448  4079  daddiu s0, s0, 4079 followed by daddiu s0, s0, -1 and
+                  slti t7, s0, 4096: rounding a size up to a 4 KB page in an
+                  allocator.  Legendia's executable contains the identical
+                  idiom at 0x00107B90 and it was innocent there too.
+IRXARC 0x0002C5AC  4080  addiu v0, zero, 4080 stored with sh next to a 4092,
+                  into a run of hardware registers.  Not a ring.
+IRXARC 0x000458C4  4080  lui/addiu 4080 pushed as an argument beside
+                  0x02000000 and 2048 -- a buffer size table.
+
+==============================================================
+THE RING-CLEAR UNROLL IS THE COMPILER'S, NOT THE SOURCE'S
+==============================================================
+Four PlayStation 2 builds clear the ring with an inline loop.  They split
+by compiler stamp, not by source lineage -- and Legendia is the row that
+settles it, because its decoder shares 18 bytes with this one (the noise
+floor) and unrolls the loop identically anyway.
+
+--- Destiny 2 2002, no .comment: one sb per iteration, bound 4078 ---
+0x0010A1B0  0x0000B1B0  0080602d  daddu    t4, a0, zero
+0x0010A1B4  0x0000B1B4  0000482d  daddu    t1, zero, zero
+0x0010A1B8  0x0000B1B8  00a6682b  sltu     t5, a1, a2
+0x0010A1BC  0x0000B1BC  24040fee  addiu    a0, zero, 4078
+0x0010A1C0  0x0000B1C0  00e91821  addu     v1, a3, t1
+0x0010A1C4  0x0000B1C4  25290001  addiu    t1, t1, 1
+0x0010A1C8  0x0000B1C8  a0600000  sb       zero, 0(v1)
+0x0010A1CC  0x0000B1CC  0124102a  slt      v0, t1, a0
+0x0010A1D0  0x0000B1D0  00000000  nop
+0x0010A1D4  0x0000B1D4  1440fffa  bne      v0, zero, 0x0010A1C0
+0x0010A1D8  0x0000B1D8  00000000  nop
+0x0010A1DC  0x0000B1DC  0000502d  daddu    t2, zero, zero
+
+--- Legendia 2005, MW 2.4.1.01: eight sb per iteration, bound 4070 ---
+0x001F6CF0  0x000F6D70  24840ae0  addiu    a0, a0, 2784
+0x001F6CF4  0x000F6D74  a0800000  sb       zero, 0(a0)
+0x001F6CF8  0x000F6D78  24c60008  addiu    a2, a2, 8
+0x001F6CFC  0x000F6D7C  a0800001  sb       zero, 1(a0)
+0x001F6D00  0x000F6D80  2cc30fe6  sltiu    v1, a2, 4070
+0x001F6D04  0x000F6D84  a0800002  sb       zero, 2(a0)
+0x001F6D08  0x000F6D88  a0800003  sb       zero, 3(a0)
+0x001F6D0C  0x000F6D8C  a0800004  sb       zero, 4(a0)
+0x001F6D10  0x000F6D90  a0800005  sb       zero, 5(a0)
+0x001F6D14  0x000F6D94  a0800006  sb       zero, 6(a0)
+0x001F6D18  0x000F6D98  a0800007  sb       zero, 7(a0)
+0x001F6D1C  0x000F6D9C  1460fff5  bne      v1, zero, 0x001F6CF4
+
+--- Abyss 2005, MW 2.4.1.01: eight sb per iteration, bound 4071 ---
+0x00122248  0x00022348  00e94021  addu     t0, a3, t1
+0x0012224C  0x0002234C  a1000000  sb       zero, 0(t0)
+0x00122250  0x00022350  25290008  addiu    t1, t1, 8
+0x00122254  0x00022354  a1000001  sb       zero, 1(t0)
+0x00122258  0x00022358  29230fe7  slti     v1, t1, 4071
+0x0012225C  0x0002235C  a1000002  sb       zero, 2(t0)
+0x00122260  0x00022360  a1000003  sb       zero, 3(t0)
+0x00122264  0x00022364  a1000004  sb       zero, 4(t0)
+0x00122268  0x00022368  a1000005  sb       zero, 5(t0)
+0x0012226C  0x0002236C  a1000006  sb       zero, 6(t0)
+0x00122270  0x00022370  1460fff5  bne      v1, zero, 0x00122248
+0x00122274  0x00022374  a1000007  sb       zero, 7(t0)
