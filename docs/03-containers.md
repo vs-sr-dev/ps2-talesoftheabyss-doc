@@ -98,6 +98,26 @@ directory record with a real stamp, and they are not all the same:
 mastering. The four files older than June 2005 are the ones section
 [08](08-cross-title.md) is about.
 
+And the volumes froze in an order that reads like a schedule:
+
+| Volume | Newest member |
+|---|---|
+| `TO7BGM` | 2005-10-21 11:22:56 |
+| `TO7MOV` | 2005-10-24 10:47:28 |
+| `TO7EV` | 2005-11-10 13:57:37 |
+| `TO7SE` | 2005-11-11 21:01:22 |
+| `TO7NPC` | 2005-11-18 14:38:40 |
+| `TO7BTL` | 2005-11-24 18:09:22 |
+| `TO7FIELD` | 2005-11-24 18:17:52 |
+| `TO7MAP` | 2005-11-24 18:18:00 |
+| `TO7ROOT` | 2005-11-25 22:37:58 |
+
+Music and video first, by a month; then voice and effects; then models; then the
+three geometry volumes within nine minutes of each other on the last working
+day; then the root, whose newest member is the executable itself, at 22:37 on
+mastering day. Five of the nine volumes' newest members are their `VSSVER.SCC`
+([09](09-leftovers.md)).
+
 The 17 `AFS` archives carry their own per-member date fields too, and unlike
 Legendia's **they are filled**: `CHT.AFS`'s members run from 2005-10-06 16:10:20
 onward, `BTL.AFS`'s from 2005-09-07 19:02:00. So this disc has a second, finer
@@ -158,7 +178,8 @@ BTL_ENM.BIN 77,283,328 bytes     316 blocks
 
 This matters more than it looks. A census that stops at the member level sees
 `F0.PKF` as *one* block — its first nine bytes are a perfectly valid header —
-decodes 163,176 bytes out of 41 MB, gets a length match, and reports success.
+decodes 163,176 bytes out of 37,951,488, gets a length match, and reports
+success.
 **46,345 of this disc's 47,513 blocks are inside such a run**, which is 97.5% of
 them and 545 MB of packed data. The run walker accepts a run only if the walk
 reaches the end of the member, which is what stops an ordinary file whose first

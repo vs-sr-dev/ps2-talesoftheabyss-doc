@@ -84,7 +84,9 @@ are all in that group, and they are `OP.SFD` and the two largest cutscenes.
 Compare *Legendia*: 22 streams at 640×320, 29.97 fps.
 
 The largest single file on the disc is `TO7MOV.CVM:/AS_009.SFD` at 213,897,216
-bytes. `TO7MOV.CVM` also carries the only `VSSVER.SCC` older than November.
+bytes. `TO7MOV.CVM` is also the second volume to stop changing: its newest
+member is its own `VSSVER.SCC` at 2005-10-24, a month before the disc was
+mastered. Only `TO7BGM.CVM` froze earlier — see [03](03-containers.md).
 
 ---
 
